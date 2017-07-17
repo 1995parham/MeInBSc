@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="card card-nav-tabs ">
+      <div class="header header-success">
+        <div class="nav-tabs-navigation">
+          <div class="nav-tabs-wrapper">
+            <ul class="nav nav-tabs" data-tabs="tabs" style="display: flex;justify-content: flex-end">
+              <li class="active">
+                <a href="http://grad.scr12.ir/content/articles#profile" data-toggle="tab">
+                  <i class="material-icons">title</i>
+                  {{page.title}}
+                </a>
+              </li>
+              <li>
+                <a href="http://grad.scr12.ir/content/articles#profile" data-toggle="tab">
+                  <i class="material-icons">face</i>
+                  {{page.author}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="tab-content text-center">
+          <div class="tab-pane active" id="settings">
+            {{content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
