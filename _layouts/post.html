@@ -24,6 +24,13 @@
             {{content}}
           </div>
         </div>
+        {% if page.image %}
+          <div style="width: 100%;display: flex;justify-content: center">
+            <div style="max-width: 20rem">
+              <img src="./assets/img/{{page.image}}" style="width: 100%">
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
