@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'BYekan';
-  src: url("/assets/fonts/yekan/BYekan.eot?#") format("eot"), url("/assets/fonts/yekan/BYekan.ttf") format("truetype"), url("/assets/fonts/yekan/BYekan.woff") format("woff");
+  src: url("../fonts/yekan/BYekan.eot?#") format("eot"), url("../fonts/yekan/BYekan.ttf") format("truetype"), url("../fonts/yekan/BYekan.woff") format("woff");
 }
 
 .select2.select2-container {
