@@ -1,4 +1,7 @@
 # MeInBSc
+
+<img src="assets/img/logo.png" width="100px">
+
 ## Thanks to all of my friends
 
 * Iman Tabrizian
