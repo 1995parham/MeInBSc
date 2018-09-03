@@ -1,4 +1,5 @@
 # MeInBSc
+[![Travis branch](https://img.shields.io/travis/1995parham/MeInBSc/master.svg?style=flat-square)](https://travis-ci.org/1995parham/MeInBSc)
 
 <img src="assets/img/logo.png" width="100px">
 
