@@ -2,3 +2,11 @@
   font-family: 'BYekan';
   src: url("../fonts/yekan/BYekan.eot?#") format("eot"), url("../fonts/yekan/BYekan.ttf") format("truetype"), url("../fonts/yekan/BYekan.woff") format("woff");
 }
+
+body {
+  font-family: 'BYekan';
+}
+
+.card-title {
+  font-family: 'BYeken';
+}
