@@ -2,6 +2,13 @@
 
 <img src="assets/img/logo.png" width="100px">
 
+## Introduction
+I was BSc Student of the Amirkabir University of Technology from 2013 until 2017.
+In our university at graduation friends write a memo for each other. In this repository,
+I have collected my diaries written by my friends.
+Many of my friends and colleagues have migrated to other countries,
+so I hope they are satisfied and successful wherever they are.
+
 ## Thanks to all of my friends
 
 * Iman Tabrizian
