@@ -10,6 +10,9 @@
         {% if page.image %}
           <img src="./assets/img/{{page.image}}" alt="img-{{page.image}}" style="width: 100%">
         {% endif %}
+        {% if page.video %}
+        <iframe height="315" src="{{page.video}}" frameborder="0" style="width: 100%" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
       </div>
     </div>
   </div>
