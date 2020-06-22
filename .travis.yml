@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.2.5
+- 2.7.0
 
 script: jekyll build && htmlproofer ./_site --external_only true
 
