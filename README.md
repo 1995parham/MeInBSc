@@ -27,7 +27,7 @@ Many of my friends and colleagues have migrated to other countries due to Iran's
 * Mohammad Hossein Tavakoli Bina
 * Autosa Ahasani
 * Elnaz Soleimani
-* Mohammad Mehdi Samiei
+* Mohammad Mahdi Samiei
 * Honeyeh Yazdizadeh
 * Parnian Sabaei
 * AmirMohammad Haghollahi
