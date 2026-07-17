@@ -1,5 +1,5 @@
 # MeInBSc
-[![Travis branch](https://img.shields.io/travis/com/1995parham/MeInBSc/master.svg?style=flat-square&logo=travis)](https://travis-ci.com/1995parham/MeInBSc)
+[![Deploy to GitHub Pages](https://github.com/1995parham/MeInBSc/actions/workflows/deploy.yml/badge.svg)](https://github.com/1995parham/MeInBSc/actions/workflows/deploy.yml)
 
 <img src="assets/img/logo.png" width="100px">
 
@@ -47,3 +47,16 @@ Many of my friends and colleagues have migrated to other countries due to Iran's
 * Saleh Khazaei
 * Negin Ganjali
 * Ehsan Edalat
+
+## Development
+This site is built with [Astro](https://astro.build). Each memory lives as a Markdown file in
+`src/content/memories/` with `title`/`author` front-matter (and optional `image`/`video`).
+
+```sh
+npm install     # install dependencies
+npm run dev     # local dev server
+npm run build   # production build into dist/
+```
+
+Pushing to `main` builds and publishes the site to GitHub Pages via
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
