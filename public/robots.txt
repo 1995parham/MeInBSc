@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1995parham.github.io/MeInBSc/sitemap-index.xml
