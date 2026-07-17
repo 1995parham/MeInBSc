@@ -1,12 +1,36 @@
 @font-face {
-  font-family: 'BYekan';
-  src: url("../fonts/yekan/BYekan.eot?#") format("eot"), url("../fonts/yekan/BYekan.ttf") format("truetype"), url("../fonts/yekan/BYekan.woff") format("woff");
+  font-family: 'Vazir';
+  src: url("../fonts/vazir/Vazir-Regular.woff2") format("woff2"),
+       url("../fonts/vazir/Vazir-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  font-family: 'BYekan';
+@font-face {
+  font-family: 'Vazir';
+  src: url("../fonts/vazir/Vazir-Medium.woff2") format("woff2"),
+       url("../fonts/vazir/Vazir-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-.card-title {
-  font-family: 'BYeken';
+@font-face {
+  font-family: 'Vazir';
+  src: url("../fonts/vazir/Vazir-Bold.woff2") format("woff2"),
+       url("../fonts/vazir/Vazir-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Vazir across the whole site, overriding Material Kit's default font. */
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, div,
+input, select, textarea, button,
+.navbar, .nav-link, .btn,
+.card-title, .card .category, .card-body {
+  font-family: 'Vazir', Tahoma, sans-serif !important;
 }
