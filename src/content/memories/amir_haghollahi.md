@@ -1,6 +1,6 @@
 ---
 title: "۹۲یی نامه:)"
-author: "میر محمد حق اللهی"
+author: "امیر محمد حق اللهی"
 ---
 
 <p style="direction: rtl;">سلام</p>

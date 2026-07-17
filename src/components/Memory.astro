@@ -23,14 +23,15 @@ const asset = (path: string) => `${base.replace(/\/$/, '')}/${path.replace(/^\//
     {image && <img class="memory__media" src={asset(`assets/img/${image}`)} alt={`عکس ${title}`} loading="lazy" />}
     {
       video && (
-        <iframe
-          class="memory__media"
-          src={video}
-          title={title}
-          loading="lazy"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
+        <div class="memory__video">
+          <iframe
+            src={video}
+            title={title}
+            loading="lazy"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
       )
     }
   </div>
