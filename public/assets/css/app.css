@@ -198,8 +198,7 @@ a:hover {
   background: #000;
 }
 
-.memory__video iframe,
-.memory__video video {
+.memory__video iframe {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -207,8 +206,14 @@ a:hover {
   border: 0;
 }
 
-.memory__video video {
-  object-fit: contain;
+/* Native player: size to the video's own aspect ratio, with native controls. */
+.memory__player {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  max-height: 80vh;
+  border-radius: 12px;
   background: #000;
 }
 
