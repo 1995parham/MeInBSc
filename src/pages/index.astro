@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Memory from '../components/Memory.astro';
+
+const memories = await getCollection('memories');
+---
+
+<Layout>
+  {memories.map((memory) => <Memory memory={memory} />)}
+</Layout>

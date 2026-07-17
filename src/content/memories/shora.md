@@ -1,0 +1,7 @@
+---
+title: "جشن یلدا ۹۸"
+author: "شورای صنفی دانشکده مهندسی کامپیوتر"
+video: "https://www.youtube.com/embed/_xUjLDQIEdk"
+---
+
+

@@ -1,0 +1,115 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'Me In BSc.',
+  description = 'یادگاری‌ها و خاطرات دوستان پرهام الوانی از دوران کارشناسی در دانشکده مهندسی کامپیوتر دانشگاه صنعتی امیرکبیر.',
+  image = 'assets/img/logo.png',
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const asset = (path: string) => `${base.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(asset(image), Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: title,
+  url: canonical.href,
+  inLanguage: 'fa-IR',
+  description,
+  author: {
+    '@type': 'Person',
+    name: 'Parham Alvani',
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Parham Alvani" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical.href} />
+    <link rel="icon" type="image/png" href={asset('assets/img/logo.png')} />
+    <link rel="sitemap" href={asset('sitemap-index.xml')} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Me In BSc." />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:locale" content="fa_IR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.href} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+    <link rel="stylesheet" href={asset('assets/css/material-kit.min.css?v=2.0.4')} />
+    <link rel="stylesheet" href={asset('assets/css/font-awesome.min.css')} />
+    <link rel="stylesheet" href={asset('assets/css/app.css')} />
+
+    <style define:vars={{ bcg: `url('${asset('assets/img/bcg.jpg')}')` }}>
+      body {
+        background: var(--bcg) no-repeat fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-success">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href={base}>خانه</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="app" class="index-page">
+      <div class="container">
+        <slot />
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script is:inline src={asset('assets/js/core/jquery.min.js')}></script>
+    <script is:inline src={asset('assets/js/core/popper.min.js')}></script>
+    <script is:inline src={asset('assets/js/core/bootstrap-material-design.min.js')}></script>
+    <script is:inline src={asset('assets/js/material-kit.min.js?v=2.0.4')}></script>
+  </body>
+</html>

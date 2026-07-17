@@ -1,4 +1,18 @@
-_site/
-.sass-cache/
-.jekyll-metadata
-.bundle/
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
