@@ -1,3 +1,6 @@
+/* ============================================================
+   Fonts
+   ============================================================ */
 @font-face {
   font-family: 'Vazir';
   src: url("../fonts/vazir/Vazir-Regular.woff2") format("woff2"),
@@ -25,12 +28,188 @@
   font-display: swap;
 }
 
-/* Apply Vazir across the whole site, overriding Material Kit's default font. */
-body,
-h1, h2, h3, h4, h5, h6,
-p, a, span, li, div,
-input, select, textarea, button,
-.navbar, .nav-link, .btn,
-.card-title, .card .category, .card-body {
-  font-family: 'Vazir', Tahoma, sans-serif !important;
+/* ============================================================
+   Theme tokens
+   ============================================================ */
+:root {
+  --accent: #059669;
+  --accent-strong: #047857;
+  --bg-overlay: rgba(247, 249, 248, 0.86);
+  --surface: #ffffff;
+  --surface-border: rgba(15, 23, 42, 0.08);
+  --text: #1f2933;
+  --text-muted: #52606d;
+  --title: #0b3d2e;
+  --shadow: 0 10px 30px -12px rgba(15, 23, 42, 0.28);
+  --radius: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #34d399;
+    --accent-strong: #6ee7b7;
+    --bg-overlay: rgba(6, 12, 10, 0.82);
+    --surface: #131a18;
+    --surface-border: rgba(255, 255, 255, 0.08);
+    --text: #e4e9e7;
+    --text-muted: #9aa5a1;
+    --title: #a7f3d0;
+    --shadow: 0 12px 34px -14px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Vazir', Tahoma, sans-serif;
+  color: var(--text);
+  line-height: 1.9;
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("../img/bcg.jpg") center / cover fixed no-repeat;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header {
+  text-align: center;
+  padding: 3.5rem 1.25rem 1.5rem;
+}
+
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-header img.logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 700;
+  color: var(--title);
+}
+
+.site-header p.subtitle {
+  margin: 0.6rem auto 0;
+  max-width: 40rem;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+/* ============================================================
+   Memories layout
+   ============================================================ */
+.memories {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.memory {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.memory:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -14px rgba(15, 23, 42, 0.35);
+}
+
+.memory__header {
+  padding: 1.4rem 1.6rem 1rem;
+  border-bottom: 1px solid var(--surface-border);
+  border-inline-start: 5px solid var(--accent);
+}
+
+.memory__title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.memory__author {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.memory__body {
+  padding: 1.3rem 1.6rem 1.6rem;
+}
+
+.memory__body p {
+  margin: 0 0 1rem;
+}
+
+.memory__body p:last-child {
+  margin-bottom: 0;
+}
+
+.memory__media {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+iframe.memory__media {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.25rem 3rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 480px) {
+  .memory__header,
+  .memory__body {
+    padding-inline: 1.15rem;
+  }
 }

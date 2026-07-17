@@ -37,6 +37,8 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#059669" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b3d2e" media="(prefers-color-scheme: dark)" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -63,53 +65,27 @@ const jsonLd = {
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
-    <link rel="stylesheet" href={asset('assets/css/material-kit.min.css?v=2.0.4')} />
-    <link rel="stylesheet" href={asset('assets/css/font-awesome.min.css')} />
+    <link rel="preconnect" href="https://1995parham.me" />
     <link rel="stylesheet" href={asset('assets/css/app.css')} />
-
-    <style define:vars={{ bcg: `url('${asset('assets/img/bcg.jpg')}')` }}>
-      body {
-        background: var(--bcg) no-repeat fixed;
-        background-size: cover;
-      }
-    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-success">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href={base}>خانه</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div id="app" class="index-page">
-      <div class="container">
-        <slot />
-      </div>
-    </div>
+    <header class="site-header">
+      <a class="brand" href={base}>
+        <img class="logo" src={asset('assets/img/logo.png')} alt="Me In BSc." width="54" height="54" />
+        <h1>یادگاری‌های دوران کارشناسی</h1>
+      </a>
+      <p class="subtitle">
+        خاطراتی که دوستانم در جشن فارغ‌التحصیلی دانشکده مهندسی کامپیوتر دانشگاه
+        صنعتی امیرکبیر برایم نوشتند.
+      </p>
+    </header>
 
-    <!-- Scripts -->
-    <script is:inline src={asset('assets/js/core/jquery.min.js')}></script>
-    <script is:inline src={asset('assets/js/core/popper.min.js')}></script>
-    <script is:inline src={asset('assets/js/core/bootstrap-material-design.min.js')}></script>
-    <script is:inline src={asset('assets/js/material-kit.min.js?v=2.0.4')}></script>
+    <main class="memories">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>ساخته‌شده با ❤ — پرهام الوانی</p>
+    </footer>
   </body>
 </html>
