@@ -1,9 +1,16 @@
-# MeInBSc
-[![Deploy to GitHub Pages](https://github.com/1995parham/MeInBSc/actions/workflows/deploy.yml/badge.svg)](https://github.com/1995parham/MeInBSc/actions/workflows/deploy.yml)
+<h1 align="center">
+  MeInBSc
+</h1>
+<p align="center">
+  <img src="public/assets/img/logo.png" width="100px">
+</p>
 
-<img src="assets/img/logo.png" width="100px">
+<p align="center">
+  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/1995parham/meinbsc/deploy.yml?style=for-the-badge&logo=github">
+</p>
 
 ## Introduction
+
 I was BSc Student of the Amirkabir University of Technology from 2013 until 2017.
 In our university at graduation's ceremony, friends write a memo for each other. In this repository, I have collected my diaries written by my friends.
 Many of my friends and colleagues have migrated to other countries due to Iran's severe conditions. So I hope they are satisfied and successful wherever they are and know that I miss them so much.
